@@ -139,6 +139,8 @@ def main():
             screen.blit(myfont.render(reaction, 4, (255,0,0)),(squareSize*10,squareSize))
         
         if not done and board.isFull():
+            board.printBoard()
+            print board.rows()
             if board.check():
                 done = True
         if done:
